@@ -6,7 +6,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Ui.Home.Apps.AppsFragment">
+        tools:context=".ui.Home.Apps.AppsFragment">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -57,18 +57,15 @@
 
                 <LinearLayout
                     android:id="@+id/monday"
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_square"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -80,28 +77,32 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Monday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+android:checked="true"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
-
-                                android:layout_margin="@dimen/_5sdp"
-                                android:layout_alignParentEnd="true"/>
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
                         </RelativeLayout>
                         <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             >
@@ -112,47 +113,30 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppinsregular"
                                 android:hint="3h"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:textColor="@color/texts"
                                 android:textSize="@dimen/_12sdp" />
 
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:layout_toRightOf="@id/one"
-                                android:background="@drawable/border_btn_white"
-                                android:backgroundTint="@color/colorPrimary"
-                                android:fontFamily="@font/poppins_bold"
-                                android:padding="@dimen/_1sdp"
-                                android:text=" +1h   "
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_12sdp" />
                         </RelativeLayout>
 
 
                     </LinearLayout>
 
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -164,54 +148,61 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Tuesday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -223,54 +214,61 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
-                                android:text="wednesday"
-                                android:textColor="@color/black"
+                                android:text="Wednesday"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -282,54 +280,61 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Thursday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -341,54 +346,61 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Friday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -400,54 +412,61 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Saturday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_two"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn"
+                    android:background="@drawable/border_btn_white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
                         android:gravity="center_vertical"
 
                         >
@@ -459,41 +478,52 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:fontFamily="@font/poppins_bold"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
                                 android:text="Sunday"
-                                android:textColor="@color/black"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
 
                             <Switch
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="end"
-                                android:padding="@dimen/_5sdp"
+                                android:padding="@dimen/_2sdp"
                                 android:thumbTint="@color/colorPrimary"
 
                                 android:layout_margin="@dimen/_5sdp"
                                 android:layout_alignParentEnd="true"/>
                         </RelativeLayout>
-                        <TextView
-                            android:background="@null"
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppinsregular"
-                            android:hint="3h"
-                            android:padding="@dimen/_5sdp"
-                            android:textColor="@color/texts"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+                            <TextView
+                                android:background="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:hint="3h"
+                                android:padding="@dimen/_2sdp"
+                                android:textColor="@color/texts"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_two"/>
                 </LinearLayout>
+
 
             </LinearLayout>
 

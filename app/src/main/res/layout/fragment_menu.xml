@@ -128,6 +128,8 @@
                             android:textColor="@color/texts"
                             android:textSize="@dimen/_14sdp" />
                         <TextView
+
+                            android:id="@+id/logout_btn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/logout"

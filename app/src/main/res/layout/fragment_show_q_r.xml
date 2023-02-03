@@ -51,6 +51,7 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
                     <ImageView
+                        android:background="@color/colorPrimarysemi"
                         android:id="@+id/scann"
                         android:layout_marginTop="@dimen/_25sdp"
                         android:padding="@dimen/_5sdp"

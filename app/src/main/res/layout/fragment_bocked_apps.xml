@@ -6,7 +6,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Ui.Home.Apps.AppsFragment">
+        tools:context=".ui.Home.Apps.AppsFragment">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".Ui.setupParent.Menu.Setting.DeleteAcFragment">
+        tools:context=".ui.setupParent.Menu.Setting.DeleteAcFragment">
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"

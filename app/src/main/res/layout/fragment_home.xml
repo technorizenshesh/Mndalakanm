@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context=".Ui.Home.HomeFragment">
+            tools:context=".ui.Home.HomeFragment">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -235,6 +235,73 @@
                 app:cornerRadius="@dimen/_10sdp"
                 app:rippleColor="@color/black" />
         </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardBackgroundColor="@color/colorPrimaryYellow_semi"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/_3sdp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_btn_white"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="start"
+                android:padding="@dimen/_2sdp"
+                android:text="ScreenShot's"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                    android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:text="view all"
+                android:textColor="@color/texts"
+                android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+
 
 
 
