@@ -6,7 +6,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".Ui.Home.Apps.AppsFragment">
+    tools:context=".ui.Home.Apps.AppsFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,9 +56,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
             </RelativeLayout>
 
             <LinearLayout
-                android:background="@drawable/border_btn_white"
+                android:background="@drawable/normal_bg"
                 android:layout_width="match_parent"
-                android:backgroundTint="@color/colorPrimaryYellow2"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -124,20 +123,61 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
                             android:textColor="@color/white"
                             android:textSize="@dimen/_14sdp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_5sdp"
-                            android:layout_marginStart="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginEnd="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_toRightOf="@id/one"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="@dimen/_1sdp"
-                            android:text=" Lock Mode  "
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+
+                            <TextView
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:padding="@dimen/_1sdp"
+                                android:text=" Lock Mode  "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                               android:layout_alignParentEnd="true"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="M"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12sdp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="T"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12sdp" />  <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:padding="@dimen/_3sdp"
+                                android:text="W"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+                            </LinearLayout>
+                        </RelativeLayout>
                     </LinearLayout>
 
 
@@ -146,9 +186,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/border_btn_white"
+                android:background="@drawable/desible_bg"
                 android:layout_width="match_parent"
-                android:backgroundTint="@color/colorPrimaryYellow2"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -213,20 +252,62 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
                             android:textColor="@color/white"
                             android:textSize="@dimen/_14sdp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_5sdp"
-                            android:layout_marginStart="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginEnd="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_toRightOf="@id/one"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="@dimen/_1sdp"
-                            android:text=" Lock Mode  "
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp" />
+                            >
+
+                            <TextView
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:padding="@dimen/_1sdp"
+                                android:text=" Lock Mode  "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:layout_alignParentEnd="true"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="S"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12sdp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="S"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12sdp" />  <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:padding="@dimen/_3sdp"
+                                android:text="M"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
                     </LinearLayout>
 
 
@@ -258,7 +339,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
             app:backgroundTint="@color/white"
-            app:cornerRadius="@dimen/_5sdp"
+            app:cornerRadius="@dimen/_15sdp"
             app:rippleColor="@color/black" />
 
     </RelativeLayout>

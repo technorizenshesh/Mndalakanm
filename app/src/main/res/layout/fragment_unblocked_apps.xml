@@ -6,7 +6,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Ui.Home.Apps.UnblockedAppsFragment">
+        tools:context=".ui.Home.Apps.UnblockedAppsFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView

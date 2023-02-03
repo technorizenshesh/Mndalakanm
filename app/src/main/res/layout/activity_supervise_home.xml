@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Ui.Home.SuperviseHomeActivity">
+        tools:context=".ui.Home.SuperviseHomeActivity">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:padding="@dimen/_5sdp"

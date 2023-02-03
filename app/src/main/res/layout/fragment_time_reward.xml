@@ -5,8 +5,9 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Ui.Home.Apps.AppsFragment">
-        <LinearLayout
+        android:fillViewport="true"
+        tools:context=".ui.Home.Apps.AppsFragment">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -55,9 +56,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:background="@drawable/border_btn_white"
+                    android:background="@drawable/night_bg"
                     android:layout_width="match_parent"
-                    android:backgroundTint="@color/colorPrimary"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginStart="@dimen/_5sdp"
@@ -166,9 +166,8 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    android:background="@drawable/border_btn_white"
+                    android:background="@drawable/night_bg"
                     android:layout_width="match_parent"
-                    android:backgroundTint="@color/colorPrimary"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginStart="@dimen/_5sdp"
@@ -278,8 +277,30 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-        </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:elevation="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/white"
+                android:padding="@dimen/_5sdp"
+                android:text=" ADD Reward"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="@dimen/_15sdp"
+                app:rippleColor="@color/black" />
+        </RelativeLayout>
 
 
 
