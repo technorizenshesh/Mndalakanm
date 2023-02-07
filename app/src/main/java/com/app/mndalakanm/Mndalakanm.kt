@@ -11,11 +11,15 @@ import com.techno.mndalakanm.R
 import com.vilborgtower.user.utils.Utils
 import timber.log.Timber
 
-
-class Mndalakanm : Application() {
+class Mndalakanm :Application(){
     var manager: SharedPref? = null
     var utils: Utils? = null
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+      //  MultiDex.install(this)
+    }
     override fun onCreate() {
+        //MultiDex.install(applicationContext)
         super.onCreate()
         Timber.plant(Timber.DebugTree())
         manager = SharedPref(applicationContext)

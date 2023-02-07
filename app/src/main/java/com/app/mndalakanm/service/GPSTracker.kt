@@ -1,19 +1,30 @@
 package com.vilborgtower.user.service
 
 import android.Manifest
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.os.Environment
 import android.os.IBinder
 import android.provider.Settings
 import android.util.Log
+import android.view.View
+import android.view.Window
 import androidx.core.app.ActivityCompat
+import java.io.File
+import java.io.FileOutputStream
+import java.text.SimpleDateFormat
+import java.util.*
+
 class GPSTracker(private val mContext: Context) : Service(),
     LocationListener {
     // Declaring a Location Manager
@@ -79,18 +90,15 @@ class GPSTracker(private val mContext: Context) : Service(),
                 // if GPS Enabled get lat/long using GPS Services
                 if (isGPSEnabled) {
                     if (location == null) {
-                        locationManager!!.requestLocationUpdates(
-                            LocationManager.GPS_PROVIDER,
-                            MIN_TIME_BW_UPDATES,
-                            MIN_DISTANCE_CHANGE_FOR_UPDATES.toFloat(), this
-                        )
+                        locationManager!!.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME_BW_UPDATES, MIN_DISTANCE_CHANGE_FOR_UPDATES.toFloat(), this)
                         Log.d("GPS Enabled", "GPS Enabled")
                         if (locationManager != null) {
-                            location = locationManager!!
-                                .getLastKnownLocation(LocationManager.GPS_PROVIDER)
+                            location = locationManager!!.getLastKnownLocation(LocationManager.GPS_PROVIDER)
                             if (location != null) {
                                 latitude = location!!.latitude
                                 longitude = location!!.longitude
+                                Log.e("TAG", "latitudelatitudelatitudelatitude: -====="+latitude )
+                                Log.e("TAG", "longitudelongitudelongitudelongitude: -====="+longitude )
                                 //                                App.editor.putString("LAT", String.valueOf(location.getLatitude()));
 //                                App.editor.putString("LON", String.valueOf(location.getLongitude()));
 //                                App.editor.apply();
@@ -134,6 +142,7 @@ class GPSTracker(private val mContext: Context) : Service(),
     @JvmName("getLatitude1")
     fun getLatitude(): Double {
         if (location != null) latitude = location!!.latitude
+        Log.e("TAG", "getLatitudegetLatitudegetLatitudegetLatitude: "+latitude )
         return latitude
     }
 
@@ -143,6 +152,8 @@ class GPSTracker(private val mContext: Context) : Service(),
     @JvmName("getLongitude1")
     fun getLongitude(): Double {
         if (location != null) longitude = location!!.longitude
+        Log.e("TAG", "getLatitudegetLatitudegetLatitudegetLatitude: "+longitude )
+
         return longitude
     }
 
@@ -179,6 +190,7 @@ class GPSTracker(private val mContext: Context) : Service(),
         this.location = location
         getLatitude()
         getLongitude()
+        //takeScreenshot()
     }
 
     override fun onProviderDisabled(provider: String) {}
@@ -190,14 +202,15 @@ class GPSTracker(private val mContext: Context) : Service(),
 
     companion object {
         // The minimum distance to change Updates in meters
-        private const val MIN_DISTANCE_CHANGE_FOR_UPDATES: Long = 2 // 10 meters
+        private const val MIN_DISTANCE_CHANGE_FOR_UPDATES: Long = 1 // 10 meters
 
         // The minimum time between updates in milliseconds
-        private const val MIN_TIME_BW_UPDATES = (1000 * 60 * 1 // 1 minute
+        private const val MIN_TIME_BW_UPDATES = (1000 * 1 * 1 // 1 minute
                 ).toLong()
     }
 
     init {
         getLocation()
     }
+
 }

@@ -17,7 +17,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
-
         android:name="com.app.mndalakanm.Mndalakanm"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,11 +27,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mndalakanm"
         tools:targetApi="32">
-
-        <!-- register the service -->
-
         <service
-            android:name=".utils.ScreenshotServiceOld"
+            android:name=".utils.ForegroundService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <service android:name=".utils.ScreenshotService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name=".utils.MyService"
+            android:enabled="true"
             android:exported="true" />
         <activity
             android:windowSoftInputMode="adjustPan"

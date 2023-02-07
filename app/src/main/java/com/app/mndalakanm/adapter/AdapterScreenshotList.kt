@@ -5,26 +5,30 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.app.mndalakanm.Model.ChildsList
+import com.app.mndalakanm.Model.SuccessScreenshotRes
+import com.app.mndalakanm.Model.SuccessSubsRes
 import com.app.mndalakanm.utils.ChildClickListener
+import com.app.mndalakanm.utils.ScreenShotClickListener
 import com.app.mndalakanm.utils.SharedPref
+import com.app.mndalakanm.utils.SubClickListener
 import com.bumptech.glide.Glide
 import com.techno.mndalakanm.R
-import com.techno.mndalakanm.databinding.ItemChildBinding
+import com.techno.mndalakanm.databinding.ItemScreenshotsBinding
+import com.techno.mndalakanm.databinding.ItemSubscriptionBinding
 
 
-class AdapterChildList(
+class AdapterScreenshotList(
     val mContext: Context,
-    var transList: ArrayList<ChildsList>?, val listener: ChildClickListener
-) : RecyclerView.Adapter<AdapterChildList.TransViewHolder>() {
+    var transList: ArrayList<SuccessScreenshotRes.ScreenshotList>?, val listener: ScreenShotClickListener
+) : RecyclerView.Adapter<AdapterScreenshotList.TransViewHolder>() {
 
     lateinit var sharedPref: SharedPref
 //    lateinit var modelLogin: ModelLogin
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransViewHolder {
-        var binding: ItemChildBinding = DataBindingUtil.inflate (
-            LayoutInflater.from(mContext), R.layout.item_child, parent, false
+        var binding: ItemScreenshotsBinding = DataBindingUtil.inflate (
+            LayoutInflater.from(mContext), R.layout.item_screenshots, parent, false
         )
         sharedPref = SharedPref(mContext)
 //        modelLogin = sharedPref.getUserDetails(AppConstant.USER_DETAILS)
@@ -32,17 +36,14 @@ class AdapterChildList(
     }
 
     override fun onBindViewHolder(holder: TransViewHolder, position: Int) {
+        var data: SuccessScreenshotRes.ScreenshotList = transList!!.get(position)
+       // holder.binding.name.text = data.name
+        holder.binding.desc.text = data.timeAgo
+        Glide.with(mContext).load(data.image).placeholder(R.drawable.ic_baseline_image_search_)
+            .error(R.drawable.ic_baseline_broken_image_)
+            .into(holder.binding.screen);
 
-        var data: ChildsList = transList!!.get(position)
-        holder.binding.tvCarName.text = data.name
-        holder.binding.status.text = data.status
-        holder.binding.timeAgo.text = data.timeAgo
-        /*Glide.with(mContext).load(data.image)
-            .error(R.drawable.child_icon)
-            .placeholder(R.drawable.child_icon)
-            .into(holder.binding.ivCar)*/
-
-        holder.binding.viewDetails.setOnClickListener {
+        holder.binding.parentCard.setOnClickListener {
             listener.onClick(position, data)
             /*  for (i in 0 until transList!!.size){
                 transList?.get(i)?.isSelected=false
@@ -58,7 +59,7 @@ class AdapterChildList(
         return if (transList == null) 0 else transList!!.size
     }
 
-    class TransViewHolder(var binding: ItemChildBinding) :
+    class TransViewHolder(var binding: ItemScreenshotsBinding) :
         RecyclerView.ViewHolder(binding.root) {}
 
 }

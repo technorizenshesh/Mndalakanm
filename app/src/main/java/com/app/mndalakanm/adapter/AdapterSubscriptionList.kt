@@ -5,26 +5,26 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.app.mndalakanm.Model.ChildsList
+import com.app.mndalakanm.Model.SuccessSubsRes
 import com.app.mndalakanm.utils.ChildClickListener
 import com.app.mndalakanm.utils.SharedPref
-import com.bumptech.glide.Glide
+import com.app.mndalakanm.utils.SubClickListener
 import com.techno.mndalakanm.R
-import com.techno.mndalakanm.databinding.ItemChildBinding
+import com.techno.mndalakanm.databinding.ItemSubscriptionBinding
 
 
-class AdapterChildList(
+class AdapterSubscriptionList(
     val mContext: Context,
-    var transList: ArrayList<ChildsList>?, val listener: ChildClickListener
-) : RecyclerView.Adapter<AdapterChildList.TransViewHolder>() {
+    var transList: ArrayList<SuccessSubsRes.SubsRes>?, val listener: SubClickListener
+) : RecyclerView.Adapter<AdapterSubscriptionList.TransViewHolder>() {
 
     lateinit var sharedPref: SharedPref
 //    lateinit var modelLogin: ModelLogin
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransViewHolder {
-        var binding: ItemChildBinding = DataBindingUtil.inflate (
-            LayoutInflater.from(mContext), R.layout.item_child, parent, false
+        var binding: ItemSubscriptionBinding = DataBindingUtil.inflate (
+            LayoutInflater.from(mContext), R.layout.item_subscription, parent, false
         )
         sharedPref = SharedPref(mContext)
 //        modelLogin = sharedPref.getUserDetails(AppConstant.USER_DETAILS)
@@ -33,16 +33,12 @@ class AdapterChildList(
 
     override fun onBindViewHolder(holder: TransViewHolder, position: Int) {
 
-        var data: ChildsList = transList!!.get(position)
-        holder.binding.tvCarName.text = data.name
-        holder.binding.status.text = data.status
-        holder.binding.timeAgo.text = data.timeAgo
-        /*Glide.with(mContext).load(data.image)
-            .error(R.drawable.child_icon)
-            .placeholder(R.drawable.child_icon)
-            .into(holder.binding.ivCar)*/
+        var data: SuccessSubsRes.SubsRes = transList!!.get(position)
+        holder.binding.name.text = data.name
+        holder.binding.desc.text = data.description
 
-        holder.binding.viewDetails.setOnClickListener {
+
+        holder.binding.parentCard.setOnClickListener {
             listener.onClick(position, data)
             /*  for (i in 0 until transList!!.size){
                 transList?.get(i)?.isSelected=false
@@ -58,7 +54,7 @@ class AdapterChildList(
         return if (transList == null) 0 else transList!!.size
     }
 
-    class TransViewHolder(var binding: ItemChildBinding) :
+    class TransViewHolder(var binding: ItemSubscriptionBinding) :
         RecyclerView.ViewHolder(binding.root) {}
 
 }

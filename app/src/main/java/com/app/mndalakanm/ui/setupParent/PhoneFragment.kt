@@ -32,7 +32,10 @@ class PhoneFragment : Fragment() {
             type = arguments?.getString("type").toString()
         }
         binding.header.imgHeader.setOnClickListener{
-            activity?.onBackPressed()
+            val bundle = Bundle()
+            bundle.putString("type", "parent")
+            navController.navigate(R.id.action_splash_to_NodeviceParentFragment, bundle)
+
         }
         binding.btnYes.setOnClickListener {
             val bundle = Bundle()
@@ -49,4 +52,5 @@ class PhoneFragment : Fragment() {
 
         return binding.root
     }
+
 }

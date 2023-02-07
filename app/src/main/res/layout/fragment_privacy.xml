@@ -12,7 +12,7 @@
         <include
             layout="@layout/header_layout"
             android:id="@+id/header" />
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
@@ -24,7 +24,7 @@
                 >
 
                 <LinearLayout
-                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
@@ -41,9 +41,12 @@
                         android:textSize="@dimen/_16sdp" />
 
                 </LinearLayout>
-
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+        </ScrollView>
 
     </LinearLayout>
 </layout>

@@ -44,21 +44,21 @@
 
                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
                    android:id="@+id/ccp"
-                   android:layout_marginTop="@dimen/_2sdp"
+                   android:layout_marginTop="@dimen/_10sdp"
                    android:layout_weight="1.25"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   app:ccp_defaultNameCode="IN"
+                   app:ccp_defaultNameCode="IQ"
                    app:ccp_defaultCode="964"
                    app:ccp_textColor="@color/texts"
-                   android:padding="16dp"
-                   app:ccp_countryPreference="IN"/>
+                   android:padding="5dp"
+                   app:ccp_countryPreference="IQ"/>
                <EditText
 android:background="@null"
                    android:id="@+id/edit_no"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginTop="@dimen/_2sdp"
                    android:layout_weight=".75"
                    android:fontFamily="@font/poppinsregular"
                    android:hint="phone no"

@@ -4,6 +4,7 @@ import com.cityoneprovider.retrofit.ApiConstant.LOGIN
 import com.app.mndalakanm.Model.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -34,6 +35,9 @@ interface ProviderInterface {
     @FormUrlEncoded
     @POST("get_parent_child")
     fun get_parent_child(@FieldMap params: Map<String, String>): Call<SuccessChildsListRes>
+    @FormUrlEncoded
+    @POST("get_subscription_plan")
+    fun get_subscription_plan(@FieldMap params: Map<String, String>): Call<SuccessSubsRes>
 
     @Multipart
     @POST("add_child")
@@ -53,5 +57,24 @@ interface ProviderInterface {
         @Part file1: MultipartBody.Part
     ): Call<SuccessUserProfile>
 
+     @Multipart
+    @POST("add_screenshot")
+    fun add_screenshot(
+        @Part("parent_id") parent_id: RequestBody,
+        @Part("child_id") name: RequestBody,
+        @Part file1: MultipartBody.Part
+    ): Call<ResponseBody>
+    @FormUrlEncoded
+    @POST("purchase_subscription")
+    fun addsub(@FieldMap params: Map<String, String> ): Call<ResponseBody>
+    @FormUrlEncoded
+    @POST("privacy_policy")
+    fun privacy_policy(@FieldMap params: Map<String, String> ): Call<ResponseBody>
+    @FormUrlEncoded
+    @POST("terms_conditions")
+    fun terms_conditions(@FieldMap params: Map<String, String> ): Call<ResponseBody>
+    @FormUrlEncoded
+    @POST("get_screenshot")
+    fun get_screenshot(@FieldMap params: Map<String, String> ): Call<SuccessScreenshotRes>
 
 }

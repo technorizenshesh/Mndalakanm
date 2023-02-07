@@ -296,10 +296,12 @@
                 android:textSize="@dimen/_10sdp" />
             </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/child_list"
             android:layout_below="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
             />
 
 

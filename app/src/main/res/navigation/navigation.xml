@@ -105,6 +105,7 @@
         <action
             android:id="@+id/action_splash_to_NodeviceParentFragment"
             app:destination="@id/NodeviceParentFragment"
+            app:popUpToInclusive="true"
             app:launchSingleTop="true" />
     </fragment>
     <fragment
@@ -188,7 +189,7 @@
             />
         <action
             android:id="@+id/action_splash_to_subscr_fragment"
-            app:destination="@id/subscr_fragment"
+            app:destination="@id/plans"
             app:launchSingleTop="true" />
         <action
             android:id="@+id/action_splash_to_support_fragment"

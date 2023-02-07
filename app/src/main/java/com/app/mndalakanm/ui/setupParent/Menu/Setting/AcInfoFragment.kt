@@ -46,13 +46,11 @@ class AcInfoFragment : Fragment() {
         sharedPref = SharedPref(requireContext())
         apiInterface = ApiClient.getClient(requireContext())!!.create(ProviderInterface::class.java)
   binding.btnSignIn.setOnClickListener {
-
-      val name = binding.name.text.toString()
-
+      val name :String? = binding.name.text.toString()
       if (name.equals("", true)) {
           binding.name.error = getString(R.string.empty)
       }   else
-      AddDetails(name)
+      AddDetails(name!!)
           }
         getProfile()
         return binding.root

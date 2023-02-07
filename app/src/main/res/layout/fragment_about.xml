@@ -80,6 +80,7 @@
                             android:textColor="@color/texts"
                             android:textSize="@dimen/_14sdp" />
                         <TextView
+                             android:id="@+id/share_app"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/rate_the_app"
